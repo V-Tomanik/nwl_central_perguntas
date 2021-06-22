@@ -1,0 +1,59 @@
+/*  . por que é a classe */
+.content{
+	display: grid;
+	/* Duas colunas envolvendo 60 e 40% da tela */
+	grid-template-columns:60% 40%;
+	/*Primeira linha defina como 11.4 rem,o resto divide em 1 fração (Pega o resto da tela)   */
+	grid-template-rows: 11.4rem 1fr;
+
+	/*Define quem ocupa quais áreas  */
+	/* Segunda linha e as duas colunas */
+ 	/* Primeira linha e as duas colunas */
+	grid-template-areas:
+	"header header"  
+	"left right"
+}
+
+
+/*Define o que é cada um dos segmentos que eu define no template-areas */
+/* elemento html -> elemento no template-area */
+header{
+	grid-area: header;
+}
+
+/* # por que é o id da div  */
+#bg{
+	grid-area:left;
+	/* top/contain define para a imagem se encaixar no top e na div inteira (não corta a imagem) */
+	background: url("/assets/home_bg_img.svg") no-repeat top/contain;
+}
+
+main{
+	grid-area: right;
+
+	/*Para organizar os elementos alinhados usamos display-flex */
+	display: flex;
+	align-items: center;
+}
+
+main .container {
+	width: min(36.3rem 100%);
+}
+
+
+main h2{
+    font-family: 'Poppins', sans-serif;
+	color: var(--black);
+	font-size: clamp(20px 5vw, 2.8rem);
+	margin-bottom: 2.4rem;
+}
+
+input{
+	border: .2rem solid var(--grey-blue);
+	padding: 0 1.6rem;
+}
+
+input, button, .button{
+	width: 100%;
+	margin-botton: 1.8rem;
+}
