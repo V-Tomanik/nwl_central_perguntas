@@ -40,13 +40,12 @@
 
 /* Seção de perguntas do room */
 #question-form h2{
-	font-family:'Poppins', sans-serif;
-	font-size: 2.8rem;
-	color:var(--black);
-	font-weight: 700;
-	line-height:2.4rem;
+    font-family: 'Poppins', sans-serif;
+    font-size: 2.8rem;
+    color: var(--black);
+    font-weight: 700;
 
-	margin-botton:2.4rem;
+    margin-bottom: 2.4rem;
 }
 
 #question-form form{
@@ -98,4 +97,57 @@
 	height: auto;
 	padding: .8rem 2.4rem;
 	line-height: 2.4rem;
+}
+.question-wrapper{
+	background: var(--white-blue);
+	margin-bottom: .8rem;
+	border-radius: 0 .8rem .8rem .8rem;
+
+	padding: 2.4rem;
+}
+
+.question-wrapper .question-content{
+	display:flex;
+	align-items:center;
+}
+
+.question-wrapper .question-content .user{
+	background: var(--blue);
+	clip-path: circle();
+	padding: 1.1rem;
+}
+
+
+.question-wrapper .question-content p {
+	margin-left: 1.6rem;
+}
+
+
+.question-wrapper .question-actions{
+	display:flex;
+	align-items: center;
+	justify-content: flex-end;
+}
+
+.question-wrapper .question-actions > a {
+	display:flex;
+	align-items:center;
+}
+
+.question-wrapper .question-actions > a > img {
+	margin-right:.8rem;
+}
+
+/* Podemos usar tb o nth-child 
+ * O seletor + pega o elemento irmão
+ * */
+.question-wrapper .question-actions > a + a{
+    margin-left: 2.4rem;
+}
+
+.question-wrapper.readed{
+	background:var(--grey-medium);
+}
+.question-wrapper.readed .question-content .user {
+	background:var(--grey-blue);
 }
